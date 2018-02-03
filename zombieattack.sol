@@ -21,10 +21,10 @@ contract ZombieBattle is ZombieHelper {
     } 
     else
     {
-     myZombie.losCount++;
+     myZombie.lossCount++;
      enemyZombie.winCount++; 
     }
 
-    _triggerCoolDown(myZombie);
+    _triggerCooldown(myZombie);
   }
 }
