@@ -4,11 +4,10 @@ import "./ZB/ZBGameMode.sol";
 
 contract ExampleGame is ZBGameMode  {
 
-    // 1. Declare mapping here
     mapping (string => bool) internal bannedCards;
 
-    // 2. Create constructor here
     constructor() public {
+        // Set rules for which cards are banned from play
         bannedCards["Leash"] = true;
         bannedCards["Bulldozer"] = true;
         bannedCards["Lawnmower"] = true;
@@ -42,19 +41,32 @@ contract ExampleGame is ZBGameMode  {
         ZBSerializer.SerializedGameStateChanges memory changes;
         changes.init();
 
+        // Changes to base game stats
         changes.changePlayerDefense(Player.Player1, 15);
         changes.changePlayerDefense(Player.Player2, 15);
-
         changes.changePlayerCurrentGooVials(Player.Player1, 3);
         changes.changePlayerCurrentGooVials(Player.Player2, 3);
-
         changes.changePlayerCurrentGoo(Player.Player1, 3);
         changes.changePlayerCurrentGoo(Player.Player2, 3);
-
         changes.changePlayerMaxGooVials(Player.Player1, 8);
         changes.changePlayerMaxGooVials(Player.Player2, 8);
 
+        // Start here
+        for (uint i = 0; i < gameState.playerStates.length; i++) {
+            CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
+            uint cardCount = 0;
+        }
 
+        // struct CardInstance {
+        //     int32 instanceId;
+        //     string mouldName;
+        //     int32 defense;
+        //     bool defenseInherited;
+        //     int32 attack;
+        //     bool attackInherited;
+        //     int32 gooCost;
+        //     bool gooCostInherited;
+        // }
 
     }
 }
