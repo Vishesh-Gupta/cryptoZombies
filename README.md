@@ -1,12 +1,14 @@
 # cryptoZombies
 
-An online Zombie game made using ethereum smart-contract service and web3.js
+An online Zombie Game made using Ethereum Smart Contracts written in Solidity and Web3.JS.
 
-The contents are uploaded once I am done with the content for the latest week addition.
+Alongwith, the Zombie Battleground Custom Game Modes Creation
 
-## Season 1
+## The Curriculum
 
-### Solidity Path: beginner to Intermediate Contracts
+### Season 1
+
+#### Solidity Path: beginner to Intermediate Contracts
 
 - Lesson 1: Making the Zombie Factory
 - Lesson 2: Zombies Attack Their Victim
@@ -15,9 +17,9 @@ The contents are uploaded once I am done with the content for the latest week ad
 - Lesson 5: ERC721 & Crypto-Collectables
 - Lesson 6: App Front-Ends & Web3.js
 
-## Season 2
+### Season 2
 
-### Hands-on Path: Matk and Deploy a Custom Game Mode
+#### Hands-on Path: Matk and Deploy a Custom Game Mode
 
 - Lesson 7: Custom Game Modes: Zombie Battleground
 - Lesson 8: Custom Deck Rules
