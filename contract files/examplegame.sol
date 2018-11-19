@@ -56,7 +56,6 @@ contract ExampleGame is ZBGameMode  {
             CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
             uint cardCount = 0;
 
-            // Start here
             for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
                 if (isLegalCard(gameState.playerStates[i].cardsInDeck[j])) {
                     newCards[cardCount] = gameState.playerStates[i].cardsInDeck[j];
@@ -64,6 +63,10 @@ contract ExampleGame is ZBGameMode  {
                 }
             }
         }
+    }
 
+    // Defined the function `isLegalCard` here
+    function isLegalCard(CardInstance card) internal view returns (bool) {
+        return (!bannedCards[card.mouldName]);
     }
 }
