@@ -1,6 +1,6 @@
 pragma solidity 0.4.24;
 
-import "./ZB/ZBGameMode.sol";
+import "../ZB/ZBGameMode.sol";
 
 contract Munchkin is ZBGameMode  {
 
@@ -12,7 +12,7 @@ contract Munchkin is ZBGameMode  {
         ZBSerializer.SerializedGameStateChanges memory changes;
         changes.init();
 
-        for (uint i = 0; i < gameState.playerStates[i]length; i++) {
+        for (uint i = 0; i < gameState.playerStates[i].length; i++) {
             CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
             uint cardCount = 0;
 
@@ -25,7 +25,6 @@ contract Munchkin is ZBGameMode  {
         }
 
         changes.changePlayerCardsInDeck(Players(i), newCards, cardCount);
-    }
         changes.emit();
 }
 

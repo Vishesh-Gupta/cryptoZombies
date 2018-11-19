@@ -2,7 +2,7 @@ pragma solidity 0.4.24;
 
 import "./ZB/ZBGameMode.sol";
 
-contract Singleton is ZBGameMode  {
+contract ZombiePile is ZBGameMode  {
 
     function beforeMatchStart(bytes serializedGameState) external {
 
@@ -12,14 +12,17 @@ contract Singleton is ZBGameMode  {
         ZBSerializer.SerializedGameStateChanges memory changes;
         changes.init();
 
-        for (uint i = 0; i < gameState.playerStates.length; i++) {
-            CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
-            uint cardCount = 0;
+        CardInstance[] memory player1Cards = new CardInstance[](gameState.playerStates[0].cardsInDeck.length);
+        CardInstance[] memory player2Cards = new CardInstance[](gameState.playerStates[2].cardsInDeck.length);
+        uint player1CardCount = 0;
+        uint player2CardCount = 0;
 
+
+        for (uint i = 0; i < gameState.playerStates.length; i++) {
+            
             for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
                 bool cardAlreadyInDeck = false;
 
-                // Start here
                 for (uint k = 0; k < cardCount; k++) {
                     if (keccak256(abi.encodePacked(newCards[k].mouldName)) == keccak256(abi.encodePacked(gameState.playerStates[i].cardsInDeck[j].mouldName))) {
                         cardAlreadyInDeck = true;
