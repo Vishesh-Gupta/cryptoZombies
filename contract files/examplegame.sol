@@ -62,12 +62,15 @@ contract ExampleGame is ZBGameMode  {
                     cardCount++;
                 }
             }
-            // Swapping the old cards with the new ones
-            changes.changePlayerCardsInDeck(player(i), newCards, cardCount);
+
+            changes.changePlayerCardsInDeck(Player(i), newCards, cardCount);
         }
+
+        // Emit the changes to be sent to the core game logic
+        changes.emit();
     }
 
     function isLegalCard(CardInstance card) internal view returns(bool) {
-        return (!bannedCards[card.mouldName])
+        return (!bannedCards[card.mouldName]);
     }
 }
