@@ -8,19 +8,19 @@ The contents are uploaded once I am done with the content for the latest week ad
 
 ### Solidity Path: beginner to Intermediate Contracts
 
-- Making the Zombie Factory
-- Zombies Attack Their Victim
-- Advanced Solidity Concepts
-- Zombie Battle System
-- ERC721 & Crypto-Collectables
-- App Front-Ends & Web3.js
+- Lesson 1: Making the Zombie Factory
+- Lesson 2: Zombies Attack Their Victim
+- Lesson 3: Advanced Solidity Concepts
+- Lesson 4: Zombie Battle System
+- Lesson 5: ERC721 & Crypto-Collectables
+- Lesson 6: App Front-Ends & Web3.js
 
 ## Season 2
 
 ### Hands-on Path: Matk and Deploy a Custom Game Mode
 
-- Custom Game Modes: Zombie Battleground
-- Custom Deck Rules
+- Lesson 7: Custom Game Modes: Zombie Battleground
+- Lesson 8: Custom Deck Rules
 
 ## Achievements
 
