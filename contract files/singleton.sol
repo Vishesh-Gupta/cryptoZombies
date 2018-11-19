@@ -17,15 +17,20 @@ contract Singleton is ZBGameMode  {
             uint cardCount = 0;
 
             for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
-                // 2. Declare `bool` here
-                
-                // Placeholder — we'll implement this logic in the next chapter
+                bool cardAlreadyInDeck = false;
 
-                // 3. Change the condition of this `if` statement:
-                if (isLegalCard(gameState.playerStates[i].cardsInDeck[j])) {
+                // Start here
+                for (uint k = 0; k < cardCount; k++) {
+                    if (keccak256(abi.encodePacked(newCards[k].mouldName)) == keccak256(abi.encodePacked(gameState.playerStates[i].cardsInDeck[j].mouldName))) {
+                        cardAlreadyInDeck = true;
+                    }
+                }
+
+                if (!cardAlreadyInDeck) {
                     newCards[cardCount] = gameState.playerStates[i].cardsInDeck[j];
                     cardCount++;
                 }
+
             }
 
             changes.changePlayerCardsInDeck(Player(i), newCards, cardCount);
@@ -33,11 +38,6 @@ contract Singleton is ZBGameMode  {
 
         changes.emit();
 
-    }
-
-    // 4. Delete this function:
-    function isLegalCard(CardInstance card) internal view returns(bool) {
-        return (card.gooCost <= 2);
     }
 
 }
