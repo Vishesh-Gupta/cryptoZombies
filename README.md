@@ -4,27 +4,27 @@ An online Zombie game made using ethereum smart-contract service and web3.js
 
 The contents are uploaded once I am done with the content for the latest week addition.
 
-## Seasion 1
+## Season 1
 
-- What is a smart contract?
-- Storage
-- uint
-- mapping
-- address
-- functions
-- modifiers
-- inheritence
-- requires
-- assert
-- public
-- private
-- ownable
-- SafeMath library
-- Token - ERC20, ERC721
+### Solidity Path: beginner to Intermediate Contracts
+
+- Making the Zombie Factory
+- Zombies Attack Their Victim
+- Advanced Solidity Concepts
+- Zombie Battle System
+- ERC721 & Crypto-Collectables
+- App Front-Ends & Web3.js
 
 ## Season 2
 
-- Custom Modes for Zombie Battlesground
+### Hands-on Path: Matk and Deploy a Custom Game Mode
+
+- Custom Game Modes: Zombie Battleground
+- Custom Deck Rules
+
+## Achievements
+
+![Achievements](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/Achievements/achievements.jpg)
 
 This is a course taught by [Loom Network](https://loomx.io)
 
