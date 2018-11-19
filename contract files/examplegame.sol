@@ -51,22 +51,19 @@ contract ExampleGame is ZBGameMode  {
         changes.changePlayerMaxGooVials(Player.Player1, 8);
         changes.changePlayerMaxGooVials(Player.Player2, 8);
 
-        // Start here
+        // Go through each player's deck and modify it to remove banned cards
         for (uint i = 0; i < gameState.playerStates.length; i++) {
             CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
             uint cardCount = 0;
-        }
 
-        // struct CardInstance {
-        //     int32 instanceId;
-        //     string mouldName;
-        //     int32 defense;
-        //     bool defenseInherited;
-        //     int32 attack;
-        //     bool attackInherited;
-        //     int32 gooCost;
-        //     bool gooCostInherited;
-        // }
+            // Start here
+            for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
+                if (isLegalCard(gameState.playerStates[i].cardsInDeck[j])) {
+                    newCards[cardCount] = gameState.playerStates[i].cardsInDeck[j];
+                    cardCount++;
+                }
+            }
+        }
 
     }
 }
