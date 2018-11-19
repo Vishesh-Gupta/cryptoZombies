@@ -13,27 +13,21 @@ contract ZombiePile is ZBGameMode  {
         changes.init();
 
         CardInstance[] memory player1Cards = new CardInstance[](gameState.playerStates[0].cardsInDeck.length);
-        CardInstance[] memory player2Cards = new CardInstance[](gameState.playerStates[2].cardsInDeck.length);
+        CardInstance[] memory player2Cards = new CardInstance[](gameState.playerStates[1].cardsInDeck.length);
         uint player1CardCount = 0;
         uint player2CardCount = 0;
 
 
         for (uint i = 0; i < gameState.playerStates.length; i++) {
-            
             for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
-                bool cardAlreadyInDeck = false;
-
-                for (uint k = 0; k < cardCount; k++) {
-                    if (keccak256(abi.encodePacked(newCards[k].mouldName)) == keccak256(abi.encodePacked(gameState.playerStates[i].cardsInDeck[j].mouldName))) {
-                        cardAlreadyInDeck = true;
-                    }
+                uint rand = uint(keccak256(abi.encodePacked(now, player1CardCount + player2CardCount))) % 2;
+                if (rand == 0) {
+                    player1Cards[player1CardCount] = gameState.playerStates[i].cardsInDeck[j];
+                    player1CardCount++;
+                } else {
+                    player2Cards[player2CardCount] = gameState.playerStates[i].cardsInDeck[j];
+                    player2CardCount++;
                 }
-
-                if (!cardAlreadyInDeck) {
-                    newCards[cardCount] = gameState.playerStates[i].cardsInDeck[j];
-                    cardCount++;
-                }
-
             }
 
             changes.changePlayerCardsInDeck(Player(i), newCards, cardCount);
