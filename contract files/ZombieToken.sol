@@ -4,6 +4,11 @@ import "./ERC721XToken.sol";
 
 // Our own token based on ERC721x Token
 contract ZombieCard is ERC721XToken {
+    // map to monitor the supply of SE and LE cards
+    // SE = Standard Edition
+    // LE = Limited Edition
+    mapping(uint => uint) internal tokenIdToIndividualSupply;
+
     // name method that returns the token name to wallets/exchanges
     function name() external view returns (string) {
         return "ZombieCard";
@@ -13,5 +18,9 @@ contract ZombieCard is ERC721XToken {
     function symbol() external view returns (string) {
         return "ZCX";
     }
-    
+
+    // indivisual supply tells the supply of the card
+    function individualSupply(uint _tokenId) public view returns (uint) {
+        return tokenIdToIndividualSupply(_tokenId);
+    }
 }
