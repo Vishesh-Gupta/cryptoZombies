@@ -24,6 +24,12 @@ Alongwith, the Zombie Battleground Custom Game Modes Creation
 - Lesson 7: Custom Game Modes: Zombie Battleground
 - Lesson 8: Custom Deck Rules
 
+### Season 3
+
+#### Plasme Path: Learn how to use PlasmaCash
+
+- Lesson 9: ERC721x: Multi Fungible Tokens
+
 ## Achievements
 
 ![Achievements](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/Achievements/achievements.jpg)
