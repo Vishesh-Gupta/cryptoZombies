@@ -9,6 +9,8 @@ contract ZombieCard is ERC721XToken {
     // LE = Limited Edition
     mapping(uint => uint) internal tokenIdToIndividualSupply;
 
+    event TokenAwarded(uint indexed tokenId, address claimer, uint amount);
+
     // name method that returns the token name to wallets/exchanges
     function name() external view returns (string) {
         return "ZombieCard";
@@ -29,5 +31,9 @@ contract ZombieCard is ERC721XToken {
         require(!exists(_tokenId), "Error: Tried to mint duplicate token id");
         _mint(_tokenId, msg.sender, _supply);
         tokenIdToIndividualSupply[_tokenId] = _supply;
+    }
+
+    function awardToken(uint _tokenId, address _to, uint _amount) public onlyOwner {
+        require(exists(_tokenId), "TokenID has not been minted");
     }
 }
