@@ -8,6 +8,7 @@ contract ZombieCard is ERC721XToken {
     // SE = Standard Edition
     // LE = Limited Edition
     mapping(uint => uint) internal tokenIdToIndividualSupply;
+    // map to see the nftTokenId count from FT
     mapping(uint => uint) internal nftTokenIdToMouldId;
     uint nftTokenIdIndex = 1000000;
 
@@ -26,6 +27,13 @@ contract ZombieCard is ERC721XToken {
     // indivisual supply tells the supply of the card
     function individualSupply(uint _tokenId) public view returns (uint) {
         return tokenIdToIndividualSupply(_tokenId);
+    }
+
+    // Bathc Minting Tokens to save gas on the network
+    function batchMintTokens(uin[] _tokenIds, uint[] _tokenSupplies) external onlyOwner {
+        for(uint i = 0; i < _tokenIds.length; i++) {
+            mintToken(_tokenIds[i], _tokenSupplies[i]);
+        }
     }
 
     // minting tokens for the cards
