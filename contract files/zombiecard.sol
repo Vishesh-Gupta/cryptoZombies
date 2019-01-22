@@ -40,6 +40,7 @@ contract ZombieCard is ERC721XToken {
         require(exists(_tokenId), "TokenID has not been minted");
         if (individualSupply[_tokenId] > 0) {
             require(_amount <= balanceOf(msg.sender, _tokenId), "Quantity greater than remaining cards");
+            // _updateTokenBalance is from ERC721XToken
             _updateTokenBalance(msg.sender, _tokenId, _amount, ObjectLib.Operations.SUB);
         }
         _updateTokenBalance(_to, _tokenId, _amount, ObjectLib.Operations.ADD);
@@ -50,6 +51,21 @@ contract ZombieCard is ERC721XToken {
     function convertToNFT(uint _tokenId, uint _amount) public {
         require(tokenType[_tokenId] == FT);
         require(_amount <= balanceOf(msg.sender, _tokenId), "You do not own enough tokens");
+        
+        _updateTokenBalance(msg.sender, _tokenId, _amount, ObjectLib.Operations.SUB);
+        for (uint i = 0; i < _amount; i++) {
+            // NFT version of mint, the contract emits an event 
+            /*
+             * ```sol
+             *      emit Transfer(address(this), _to, _tokenId)
+             * ```
+             * so that the user can get the ID to the new NFt token they received
+             */
+             _mint(nftTokenIdIndex, msg.sender);
+            nftTokenIdToMouldId[nftTokenIdIndex] = _tokenId;
+            nftTokenIdIndex++;
+        }
     }
 
 }
+
