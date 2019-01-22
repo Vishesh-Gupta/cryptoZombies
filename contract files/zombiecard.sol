@@ -67,5 +67,14 @@ contract ZombieCard is ERC721XToken {
         }
     }
 
+    // converting Non-fungible tokens to fungible tokens
+    function convertToFT(uint _tokenId) public {
+        require(tokenType[_tokenId] == NFT);
+        require(ownerOf(_tokenId) == msg.sender, "You do not own this token");
+        _updateTokenBalance(msg.sender, _tokenId, 0, ObjectLib.Operations.REPLACE);
+        _updateTokenBalance(msg.sender, nftTokenIdToMouldId[_tokenId], 1, ObjectLib.Operations.ADD);
+        emit TransferWithQuantity(address(this), msg.sender, nftTokenIdToMouldId[_tokenId], 1);
+    }
+
 }
 
