@@ -4,9 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CryptoZombies front-end</title>
-  <script language="javascript" type="text/javascript" src="https:
-    <script language=" javascript" type="text/javascript"
-    src="web3.min.js"></script>
+  <script language=" javascript" type="text/javascript" src="web3.min.js"></script>
   <script language="javascript" type="text/javascript" src="cryptozombies_abi.js"></script>
 </head>
 
@@ -35,7 +33,11 @@
       var web3Infura = new Web3(new Web3.providers.WebsocketProvider("wss:"));
       var czEvents = new web3Infura.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
 
-      czEvents.events.Transfer({ filter: { _to: userAccount } })
+      czEvents.events.Transfer({
+          filter: {
+            _to: userAccount
+          }
+        })
         .on("data", function (event) {
           let data = event.returnValues;
           getZombiesByOwner(userAccount).then(displayZombies);
@@ -44,12 +46,9 @@
 
     function displayZombies(ids) {
       $("#zombies").empty();
-      for (id of ids) {
-
+      for (let id of ids) {
         getZombieDetails(id)
           .then(function (zombie) {
-
-
             $("#zombies").append(`<div class="zombie">
               <ul>
                 <li>Name: ${zombie.name}</li>
@@ -65,12 +64,11 @@
     }
 
     function createRandomZombie(name) {
-
-
       $("#txStatus").text("Creating new zombie on the blockchain. This may take a while...");
-
       return CryptoZombies.methods.createRandomZombie(name)
-        .send({ from: userAccount })
+        .send({
+          from: userAccount
+        })
         .on("receipt", function (receipt) {
           $("#txStatus").text("Successfully created " + name + "!");
 
@@ -85,7 +83,9 @@
     function feedOnKitty(zombieId, kittyId) {
       $("#txStatus").text("Eating a kitty. This may take a while...");
       return CryptoZombies.methods.feedOnKitty(zombieId, kittyId)
-        .send({ from: userAccount })
+        .send({
+          from: userAccount
+        })
         .on("receipt", function (receipt) {
           $("#txStatus").text("Ate a kitty and spawned a new Zombie!");
           getZombiesByOwner(userAccount).then(displayZombies);
@@ -98,7 +98,10 @@
     function levelUp(zombieId) {
       $("#txStatus").text("Leveling up your zombie...");
       return CryptoZombies.methods.levelUp(zombieId)
-        .send({ from: userAccount, value: web3.utils.toWei("0.001", "ether") })
+        .send({
+          from: userAccount,
+          value: web3.utils.toWei("0.001", "ether")
+        })
         .on("receipt", function (receipt) {
           $("#txStatus").text("Power overwhelming! Zombie successfully leveled up");
         })
@@ -120,17 +123,9 @@
     }
 
     window.addEventListener('load', function () {
-
-
       if (typeof web3 !== 'undefined') {
-
         web3js = new Web3(web3.currentProvider);
-      } else {
-
-
-      }
-
-
+      } else {}
       startApp()
 
     })
