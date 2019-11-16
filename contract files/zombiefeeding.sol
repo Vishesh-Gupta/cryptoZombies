@@ -1,4 +1,4 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.5.11;
 
 import "./zombiefactory.sol";
 
@@ -22,7 +22,7 @@ contract ZombieFeeding is ZombieFactory {
   KittyInterface kittyContract;
 
   modifier onlyOwnerOf(uint _zombieId) {
-    require(msg.sender == zombieToOwner[_zombieId]);
+    require(msg.sender == zombieToOwner[_zombieId], "sender is not the only owner of this zombie");
     _;
   }
 
@@ -31,7 +31,7 @@ contract ZombieFeeding is ZombieFactory {
   }
 
   function _triggerCooldown(Zombie storage _zombie) internal {
-    _zombie.readyTime = uint32(now + cooldownTime);
+    _zombie.readyTime = uint32(block.timestamp + cooldownTime);
   }
 
   function _isReady(Zombie storage _zombie) internal view returns (bool) {
@@ -40,7 +40,7 @@ contract ZombieFeeding is ZombieFactory {
 
   function feedAndMultiply(uint _zombieId, uint _targetDna, string _species) internal onlyOwnerOf(_zombieId) {
     Zombie storage myZombie = zombies[_zombieId];
-    require(_isReady(myZombie));
+    require(_isReady(myZombie), "zombie is not ready yet");
     _targetDna = _targetDna % dnaModulus;
     uint newDna = (myZombie.dna + _targetDna) / 2;
     if (keccak256(_species) == keccak256("kitty")) {

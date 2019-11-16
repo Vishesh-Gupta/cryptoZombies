@@ -1,6 +1,6 @@
-pragma solidity 0.4.24;
+pragma solidity ^0.5.11;
 
-import "../ZB/ZBGameMode.sol";
+import "../ZBGameMode.sol";
 
 contract Munchkin is ZBGameMode  {
 
@@ -25,10 +25,9 @@ contract Munchkin is ZBGameMode  {
         }
 
         changes.changePlayerCardsInDeck(Players(i), newCards, cardCount);
-        changes.emit();
+        changes.emitStateChange();
 }
 
-    
     function isLegalCard(CardInstance card) internal view returns(bool) {
         return (card.gooCost <= 2);
     }

@@ -1,6 +1,6 @@
-pragma solidity 0.4.24;
+pragma solidity ^0.5.11;
 
-import "./ZB/ZBGameMode.sol";
+import "./ZBGameMode.sol";
 
 contract ExampleGame is ZBGameMode  {
 
@@ -67,7 +67,7 @@ contract ExampleGame is ZBGameMode  {
         }
 
         // Emit the changes to be sent to the core game logic
-        changes.emit();
+        changes.emitStateChange();
     }
 
     function isLegalCard(CardInstance card) internal view returns(bool) {
