@@ -2,7 +2,7 @@
 // to compile. You can find a repo with all the final files at:
 // https://github.com/loomnetwork/zb_game_mode
 
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.11;
 
 import "./ZBEnum.sol";
 import "./ZBGameMode.sol";
@@ -28,8 +28,7 @@ library ZBSerializer {
     // GameState deserialization
 
     function init(ZBGameMode.GameState memory self, bytes serializedGameState) internal pure {
-        SerialityBinaryStream.BinaryStream memory stream =
-            SerialityBinaryStream.BinaryStream(serializedGameState, serializedGameState.length);
+        SerialityBinaryStream.BinaryStream memory stream = SerialityBinaryStream.BinaryStream(serializedGameState, serializedGameState.length);
 
         self.id = stream.readInt64();
         self.currentPlayerIndex = stream.readUint8();
@@ -164,7 +163,7 @@ library ZBSerializer {
         return self.stream.buffer;
     }
 
-    function emit(SerializedGameStateChanges memory self) internal {
+    function emitStateChange(SerializedGameStateChanges memory self) internal {
         emit GameStateChanges(getBytes(self));
     }
 
