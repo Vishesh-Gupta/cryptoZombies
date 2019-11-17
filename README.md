@@ -1,14 +1,14 @@
 # cryptoZombies
 
-An online Zombie Game made using Ethereum Smart Contracts written in Solidity and Web3.JS.
+*cryptoZombies* is the most common platform for developers to learn Solidity and about development on Ethereum, the programmable blockchain. It is a course started by *Loom Network*, that talks about variety of concepts of solidity starting from what a contract is and in detail to what tokens are an
 
-Alongwith, the Zombie Battleground Custom Game Modes Creation
+Taking an early initiative, access to special lessons was provided (Lessons 7 & 8) for creating custom game elements to their CCG/TCG game called Relentless (earlier called Zombie Battleground)
+
+Recently, after the news from Facebook launching `libra`, courses on that were added.
 
 ## The Curriculum
 
-### Season 1
-
-#### Solidity Path: beginner to Intermediate Contracts
+### Solidity Path: beginner to Intermediate Contracts
 
 - Lesson 1: Making the Zombie Factory
 - Lesson 2: Zombies Attack Their Victim
@@ -17,23 +17,27 @@ Alongwith, the Zombie Battleground Custom Game Modes Creation
 - Lesson 5: ERC721 & Crypto-Collectables
 - Lesson 6: App Front-Ends & Web3.js
 
-### Season 2
+#### Hands-on Path: Make and Deploy a Custom Game Mode
 
-#### Hands-on Path: Matk and Deploy a Custom Game Mode
-
-- Lesson 7: Custom Game Modes: Zombie Battleground
+- Lesson 7: Custom Game Modes: Zombie Battleground (now called Relentless)
 - Lesson 8: Custom Deck Rules
-
-### Season 3
 
 #### Plasme Path: Learn how to use PlasmaCash
 
 - Lesson 9: ERC721x: Multi Fungible Tokens
 
+### Advanced Solidity Path: Get In-depth Knowledge
+
+- Lesson 10: Deploying DApps with Truffle
+- Lesson 11: Testing Smart Contracts with Truffle
+
+### Libra Path: Master the Basics of Libra Blockchain Development
+
+- Lesson 12: Libra Basics
+
 ## Achievements
 
-![Achievements](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/Achievements/achievements.jpg)
+![Achievements](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/achievements/solidity.jpg)
+![Libra Achievement](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/achievements/libra-lesson.jpg)
 
-This is a course taught by [Loom Network](https://loomx.io)
-
-Copyright belong to the Loom Network
+&copy; [Loom Network](https://loomx.io/)
