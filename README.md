@@ -37,7 +37,7 @@ Recently, after the news from Facebook launching `libra`, courses on that were a
 
 ## Achievements
 
-![Achievements](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/achievements/solidity.jpg)
-![Libra Achievement](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/achievements/libra-lesson.jpg)
+![Achievements](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/Achievements/solidity.jpg)
+![Libra Achievement](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/Achievements/libra-lesson.png)
 
 &copy; [Loom Network](https://loomx.io/)
