@@ -1,12 +1,10 @@
 # cryptoZombies
 
-*cryptoZombies* is the most common platform for developers to learn Solidity and about development on Ethereum, the programmable blockchain. It is a course started by *Loom Network*, that talks about variety of concepts of solidity starting from what a contract is and in detail to what tokens are an
+*cryptoZombies* is the most common platform for developers to learn Solidity and about development on Ethereum, the programmable blockchain. It is a course started by *Loom Network*, that talks about variety of concepts of solidity starting from what a contract is and in detail to what tokens are.
 
 Taking an early initiative, access to special lessons was provided (Lessons 7 & 8) for creating custom game elements to their CCG/TCG game called Relentless (earlier called Zombie Battleground)
 
-Recently, after the news from Facebook launching `libra`, courses on that were added. Later on the course was removed from the curriculum though I have a README.md available
-
-More courses were added for how to test with truffle and how to build oracles. Furthermore development with zkSync and advanced concepts for zkSync
+More courses were added for how to test with truffle and how to build oracles. Furthermore development with zkSync and advanced concepts for zkSync.
 
 ## The Curriculum
 
@@ -38,10 +36,11 @@ More courses were added for how to test with truffle and how to build oracles. F
 
 ### Libra Path: Master the Basics of Libra Blockchain Development
 
-- Lesson 12: Libra Basics
+- Lesson 12: Libra Basics [Deprecated]
 
 ### Beyong Ethereum Path: Explore the Blockchain Ecosystem
 
+- Lesson 13: All about Binance Chain [Deprecated]
 - Lesson 17: Intro to zkSync
 - Lesson 18: Advanced zkSync Concepts
 
