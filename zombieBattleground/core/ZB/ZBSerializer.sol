@@ -2,11 +2,11 @@
 // to compile. You can find a repo with all the final files at:
 // https://github.com/loomnetwork/zb_game_mode
 
-pragma solidity ^0.5.11;
+pragma solidity ^0.8.14;
 
 import "./ZBEnum.sol";
 import "./ZBGameMode.sol";
-import "./SerialityBinaryStream.sol";
+
 
 library ZBSerializer {
     using SerialityBinaryStream for SerialityBinaryStream.BinaryStream;

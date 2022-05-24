@@ -1,8 +1,9 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.8.14;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 import "./zombieattack.sol";
-import "./erc721.sol";
-import "./safemath.sol";
 
 /// TODO: Replace this with natspec descriptions
 /// @title A contract that manages transferring zombie ownership
