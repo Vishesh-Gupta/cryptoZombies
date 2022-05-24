@@ -37,7 +37,12 @@ Recently, after the news from Facebook launching `libra`, courses on that were a
 
 ## Achievements
 
-![Achievements](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/Achievements/solidity.jpg)
-![Libra Achievement](https://github.com/Vishesh-Gupta/cryptoZombies/blob/master/Achievements/libra-lesson.png)
+- Completed `Solidity Path: Beginner to Intermediate Smart Contracts`
+
+<img src="./achievements/solidity.jpg" height=60% width=50%>
+
+- Completed `Multi Fungible Tokens`
+
+<img src="./achievements/libra-lesson.png" height=30% width=30%>
 
 &copy; [Loom Network](https://loomx.io/)
