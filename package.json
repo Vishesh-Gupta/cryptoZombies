@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@openzeppelin/contracts": "^4.6.0",
-    "erc721x": "^1.0.1",
-    "openzeppelin-solidity": "4.6.0"
-  }
-}
