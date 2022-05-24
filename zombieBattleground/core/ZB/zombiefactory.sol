@@ -1,7 +1,7 @@
-pragma solidity ^0.4.19;
+pragma solidity 0.8.14;
 
-import "./ownable.sol";
-import "./safemath.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 contract ZombieFactory is Ownable {
 

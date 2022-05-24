@@ -1,6 +1,6 @@
-pragma solidity ^0.5.11;
+pragma solidity 0.8.14;
 
-import "../ZBGameMode.sol";
+import "./ZB/ZBGameMode.sol";
 
 contract Munchkin is ZBGameMode  {
 

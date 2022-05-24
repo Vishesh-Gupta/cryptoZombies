@@ -1,6 +1,6 @@
-pragma solidity 0.4.24;
+pragma solidity 0.8.14;
 
-import "../ZB/ZBGameMode.sol";
+import "./ZB/ZBGameMode.sol";
 
 contract Singleton is ZBGameMode  {
 

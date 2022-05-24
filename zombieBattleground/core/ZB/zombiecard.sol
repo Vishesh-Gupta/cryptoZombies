@@ -1,6 +1,6 @@
-pragma solidity ^0.4.25;
+pragma solidity ^0.8.14;
 
-import "./ERC721XToken.sol";
+import "erc721x/contracts/Core/ERC721X/ERC721XToken.sol";
 
 // Our own token based on ERC721x Token
 contract ZombieCard is ERC721XToken {
