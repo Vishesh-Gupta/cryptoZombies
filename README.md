@@ -4,7 +4,9 @@
 
 Taking an early initiative, access to special lessons was provided (Lessons 7 & 8) for creating custom game elements to their CCG/TCG game called Relentless (earlier called Zombie Battleground)
 
-Recently, after the news from Facebook launching `libra`, courses on that were added.
+Recently, after the news from Facebook launching `libra`, courses on that were added. Later on the course was removed from the curriculum though I have a README.md available
+
+More courses were added for how to test with truffle and how to build oracles. Furthermore development with zkSync and advanced concepts for zkSync
 
 ## The Curriculum
 
@@ -30,10 +32,22 @@ Recently, after the news from Facebook launching `libra`, courses on that were a
 
 - Lesson 10: Deploying DApps with Truffle
 - Lesson 11: Testing Smart Contracts with Truffle
+- Lesson 14: How to Build an Oracle
+- Lesson 15: How to Build an Oracle - Part 2
+- Lesson 16: How to Build an Oracle - Part 3
 
 ### Libra Path: Master the Basics of Libra Blockchain Development
 
 - Lesson 12: Libra Basics
+
+### Beyong Ethereum Path: Explore the Blockchain Ecosystem
+
+- Lesson 17: Intro to zkSync
+- Lesson 18: Advanced zkSync Concepts
+
+### Chainlink Path: Decentralized Oracles
+
+- Lesson 19: Data Feeds and Computation
 
 ## Achievements
 
