@@ -28,7 +28,7 @@
     "minimist": ">=1.2.6"
   },
   "dependencies": {
-    "loom-js": "1.90.0",
+    "loom-js": "1.91.0",
     "loom-truffle-provider": "^0.6.0",
     "truffle": "^4.1.14",
     "solium": "^1.1.8",
