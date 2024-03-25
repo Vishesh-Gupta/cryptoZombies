@@ -43,6 +43,6 @@
     "openzeppelin-solidity": "^4.8.1",
     "solium": "^1.1.8",
     "truffle": "^5.5.19",
-    "web3-utils": "1.8.1"
+    "web3-utils": "4.2.1"
   }
 }
