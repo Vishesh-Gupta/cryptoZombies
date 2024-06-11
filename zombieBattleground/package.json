@@ -21,7 +21,7 @@
     "name": "Vishesh Gupta"
   },
   "devDependencies": {
-    "braces": "^2.3.2",
+    "braces": "^3.0.3",
     "diff": ">= 3.5.0",
     "ganache": "7.0.0",
     "mem": ">=4.0.0",
